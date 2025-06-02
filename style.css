@@ -533,7 +533,7 @@ nav ul.nav-links li ul.dropdown li a:focus {
 }
 
 .download-card.premium::before {
-  content: "Premium Member";
+  content: "Premium";
   position: absolute;
   top: -12px;
   right: -12px;
