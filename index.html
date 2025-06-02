@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ViVenDo | Plants vs Zombies 2 | Indonesia</title>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <meta
+      name="description"
+      content="ViVenDo is a Plants vs Zombies 2 fan project offering exclusive content and game mods. Download now!" />
+    <meta property="og:title" content="ViVenDo | Plants vs Zombies 2" />
+    <meta
+      property="og:description"
+      content="Unlock all features of PvZ2 with ViVenDo. Free and Premium save data downloads." />
+
+    <!-- Tambahan Font PvZ-style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Bangers&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="matrixRain"></canvas>
+    <!-- Scroll Progress Bar -->
+    <div id="loading-progress-bar"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner">
+        <img src="favicon.png" alt="ViVenDo Logo" class="spinner-logo" />
+      </div>
+      <p>Loading ViVenDo...</p>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+      <div class="nav-logo">ViVenDo</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">Rumah</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <!-- Features with dropdown -->
+          <li class="has-dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true"
+              aria-expanded="false" role="button" tabindex="0">Informasi ▾</a>
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="#installation">Instalasi</a></li>
+              <li><a href="#changelog">Pembaruan</a></li>
+              <li><a href="#gamestab">Permainan</a></li>
+              <li><a href="#features">Fitur</a></li>
+            </ul>
+          </li>
+          <li><a href="#download">Unduhan</a></li>
+          <!-- Legalization with dropdown -->
+          <li class="has-dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true"
+              aria-expanded="false" role="button" tabindex="0">Mendukung ▾</a>
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="#testimonials">Testimoni</a></li>
+              <li><a href="#legalization">Legalisasi</a></li>
+              <li><a href="#question">Pertanyaan</a></li>
+              <li><a href="#privacy">Kebijakan</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <div
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        role="button"
+        tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Hero Section with Parallax Background -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content container">
+        <img src="hero-logo.png" alt="ViVenDo Logo" class="logo" />
+        <h1 class="hero-title">Selamat datang di ViVenDo</h1>
+        <h3 class="hero-subtitle">
+          Zombi-zombi kembali di Plants vs. Zombies 2!
+        </h3>
+        <p class="hero-description">
+          Temui, sapa, dan kalahkan legiun zombie dari awal waktu hingga akhir
+          zaman. Kumpulkan pasukan tanaman yang kuat, perkuat mereka dengan
+          Makanan Tanaman, dan temukan cara-cara menakjubkan untuk melindungi
+          otakmu. Ini adalah alam semesta yang terus berkembang penuh
+          kesenangan! Dan zombie - banyak sekali zombie!
+        </p>
+        <a href="#features" class="btn-primary">Jelajahi Permainan</a>
+      </div>
+    </section>
+
+    <!-- PVZ2 Video Section -->
+    <section id="pvz2-video" class="pvz2-video-section container">
+      <h2 class="section-title">Saksikan Plants vs Zombies 2 Beraksi</h2>
+      <div class="video-center">
+        <div class="video-box">
+          <iframe
+            src="https://www.youtube.com/embed/uPThTZeSLCc"
+            title="Plants vs Zombies 2 Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-game-section container">
+      <h2 class="section-title">Tentang Game Ini</h2>
+      <div class="about-game-content">
+        <div class="about-game-text">
+          <p>
+            <strong>Plants vs. Zombies™ 2</strong> adalah game strategi aksi
+            pemenang penghargaan di mana kamu akan bertemu, menyapa, dan
+            mengalahkan gerombolan zombie kocak — dari awal zaman hingga akhir
+            dunia. Bangun pasukan tanaman yang kuat, tingkatkan mereka dengan
+            Plant Food, dan lindungi otakmu dengan segala cara!
+          </p>
+
+          <h3><i class="fas fa-seedling"></i> Temukan Ratusan Tanaman &
+            Zombie</h3>
+          <p>
+            Kumpulkan tanaman favoritmu seperti Sunflower dan Peashooter,
+            ditambah pahlawan baru yang unik seperti Lava Guava dan Laser Bean.
+            Hadapi musuh ikonik seperti Jetpack Zombie, Mermaid Imp, bahkan
+            Zombie Ayam yang mengamuk!
+          </p>
+
+          <h3><i class="fas fa-bolt"></i> Tingkatkan & Perkuat Tanamanmu</h3>
+          <p>
+            Dapatkan Paket Benih (Seed Packets) saat bermain dan gunakan untuk
+            meningkatkan kemampuan tanaman — perkuat serangan, percepat waktu
+            tanam, atau buka kemampuan spesial. Bangun pertahanan halaman yang
+            tak tertembus!
+          </p>
+
+          <h3><i class="fas fa-trophy"></i> Bersaing di Pertarungan Arena</h3>
+          <p>
+            Uji strategi zombie-mu melawan pemain lain di tantangan Arena waktu
+            nyata. Naikkan peringkat, dapatkan hadiah seperti koin dan piñata,
+            dan jadilah penjaga taman terbaik!
+          </p>
+
+          <h3><i class="fas fa-globe-americas"></i> Jelajahi Ruang & Waktu</h3>
+          <p>
+            Bertarunglah di 11 dunia gila — mulai dari Mesir Kuno hingga Masa
+            Depan yang Jauh. Dengan lebih dari 300 level, zona tanpa akhir,
+            mini-game seru, dan event harian seperti Piñata Party, tantangan
+            baru selalu menantimu. Tapi hati-hati... Dr. Zomboss menunggu di
+            akhir setiap dunia!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="installation" class="install-guidevvd container">
+      <div class="install-container">
+        <h2 class="install-title">Cara Instalasi File (Data Tamat +
+          OBB)</h2>
+        <ol class="install-steps">
+          <li>Pastikan Anda sudah mengunduh dan menginstal <strong>Plants vs.
+              Zombies 2</strong> dari Google Play Store.</li>
+          <li>Unduh file <code>PP.dat</code> dan file <code>main.obb</code> dari
+            link yang tersedia di halaman ini.</li>
+          <li>Buka file manager di perangkat Android Anda.</li>
+          <li>Salin file <code>PP.dat</code> ke direktori:
+            <br><code>Android/data/com.ea.game.pvz2_row/files/</code>
+          </li>
+          <li>Salin file <code>main.obb</code> ke direktori:
+            <br><code>Android/obb/com.ea.game.pvz2_row/</code>
+          </li>
+          <li>Pastikan file tersalin dengan benar dan tidak diganti nama.</li>
+          <li>Buka kembali game <strong>Plants vs. Zombies 2</strong> dan semua
+            konten ViVenDo akan aktif secara otomatis, termasuk hidden plant dan
+            data tamat.</li>
+        </ol>
+        <p class="install-note">
+          ⚠️ <strong>Catatan:</strong> ViVenDo tidak memodifikasi APK. Semua
+          file hanya berupa data tambahan dan digunakan untuk tujuan hiburan.
+          Backup data asli Anda sebelum mengganti file.
+        </p>
+      </div>
+    </section>
+
+    <section id="changelog" class="changelogvvd container">
+      <div class="changelog-container">
+        <h2 class="changelog-title">Catatan Perubahan / Log Pembaruan</h2>
+
+        <div class="changelog-entry">
+          <h3>Versi <span id="app-version-changelog"></span> - <span
+              id="changelog-date"></span></h3>
+          <ul>
+            <li>Menambahkan tanaman tersembunyi <strong>Sour Shot</strong>.</li>
+            <li>Penyesuaian kecil pada file <code>PP.dat</code> untuk
+              kompatibilitas yang lebih baik dengan versi terbaru dari
+              PvZ2.</li>
+            <li>Optimalkan file OBB agar lebih ringan dan efisien pada perangkat
+              low-end.</li>
+            <li>Memperbaiki bug di mana Sour Shot tidak muncul di beberapa
+              dunia.</li>
+            <li>Pembaruan ikon visual untuk beberapa tanaman mod.</li>
+            <li>Penyesuaian tanaman penyeimbang tersembunyi untuk mencocokkan
+              tingkat kesulitan permainan.</li>
+            <li>Penambahan panduan instalasi dalam bahasa Indonesia &
+              Inggris.</li>
+          </ul>
+          <p><strong>Catatan:</strong> Pemasangan file <code>PP.dat</code> dan
+            <code>OBB</code> tidak memerlukan akses root pada perangkat Android
+            Anda. Cukup ikuti panduan instalasi dengan cermat untuk memastikan
+            mod berjalan dengan lancar.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="gamestab" class="gametabvvd container">
+      <h2 class="section-title">Versi Game Tersedia</h2>
+      <div class="gametab-container">
+
+        <!-- Plants vs Zombies 2 -->
+        <div class="gametab-card">
+          <img src="plants-vs-zombies-2.png" alt="Plants Vs Zombies 2"
+            class="icon-img" style="border-radius: 15px;" />
+          <h3 class="plant-title">Plants vs Zombies™ 2</h3>
+          <div class="platform-info">
+            <ul>
+              <li><strong>Platform Resmi:</strong>
+                <ul>
+                  <li>Android</li>
+                  <li>iOS</li>
+                  <li>Amazon Fire</li>
+                </ul>
+              </li>
+              <li><strong>Bukan Platform Resmi:</strong>
+                <ul>
+                  <li>Windows Phone</li>
+                  <li>Windows PC (Emulator)</li>
+                </ul>
+              </li>
+              <li><strong>Tidak Pernah Dirilis Untuk:</strong>
+                <ul>
+                  <li>Konsol</li>
+                  <li>Steam</li>
+                  <li>Linux</li>
+                </ul>
+              </li>
+              <li><strong>Genre:</strong>
+                <ul>
+                  <li>Strategy</li>
+                  <li>Tower Defense</li>
+                  <li>Casual</li>
+                  <li>Multiplayer</li>
+                  <li>Competitive Multiplayer</li>
+                  <li>Single Player</li>
+                  <li>Stylized</li>
+                  <li>Zombie</li>
+                  <li>Battling</li>
+                  <li>Offline</li>
+                </ul>
+              </li>
+              <li><strong>Catatan:</strong> Versi PC hanya tersedia melalui
+                emulator. Tidak ada versi .exe resmi seperti Plants vs
+                Zombies™.</li>
+            </ul>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ea.game.pvz2_row"
+              target="_blank" rel="noopener" class="btn-gametabvvd">Unduh
+              APK & OBB</a>
+            <a href="#download" class="btn-gametabvvd">Unduh Save Data</a>
+          </div>
+        </div>
+
+        <!-- PvZ2 Reflourished -->
+        <div class="gametab-card">
+          <img src="plants-vs-zombies-2-reflourished.png"
+            alt="PvZ2 Reflourished"
+            class="icon-img" style="border-radius: 15px;" />
+          <h3 class="plant-title">Plants vs Zombies™ 2: Reflourished</h3>
+          <div class="platform-info">
+            <ul>
+              <li><strong>Platform Resmi:</strong>
+                <ul>
+                  <li>Android (Modded via Community)</li>
+                </ul>
+              </li>
+              <li><strong>Bukan Platform Resmi:</strong>
+                <ul>
+                  <li>Emulator PC Android (Bluestacks, Nox, dll)</li>
+                </ul>
+              </li>
+              <li><strong>Tidak Pernah Dirilis Untuk:</strong>
+                <ul>
+                  <li>iOS</li>
+                  <li>Konsol</li>
+                  <li>Steam</li>
+                </ul>
+              </li>
+              <li><strong>Genre:</strong>
+                <ul>
+                  <li>Strategy</li>
+                  <li>Tower Defense</li>
+                  <li>Casual</li>
+                  <li>Multiplayer</li>
+                  <li>Competitive Multiplayer</li>
+                  <li>Single Player</li>
+                  <li>Stylized</li>
+                  <li>Zombie</li>
+                  <li>Battling</li>
+                  <li>Offline</li>
+                </ul>
+              </li>
+              <li><strong>Catatan:</strong> Ini adalah versi Plants vs Zombies™
+                2 yang dimodifikasi komunitas, tidak dirilis oleh EA atau
+                PopCap.</li>
+            </ul>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a
+              href="#"
+              class="btn-gametabvvd disabled"
+              onclick="return false;">
+              Unduh APKs & OBB
+            </a>
+            <a href="#download" class="btn-gametabvvd">Unduh
+              Save Data</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section container">
+      <h2 class="section-title">Fitur Permainan</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <img src="icon-plants.png" alt="Plants Icon" class="icon-img" />
+          <span class="hidden-plant-label">Tanaman Tersembunyi</span>
+          <h3 class="plant-title">Tanaman Baru Sour Shot</h3>
+
+          <section class="plant-section">
+            <h5>Deskripsi</h5>
+            <p>
+              Sour Shot adalah tanaman tipe ofensif yang menyerang dengan
+              meluncurkan proyektil asam berbentuk lemon yang memercik ke
+              berbagai arah saat mengenai target. Setiap tembakan memantul dan
+              memberikan efek percikan ke zombie di dekatnya, membuatnya sangat
+              efektif melawan kerumunan. Proyektilnya juga memperlambat zombie
+              yang terkena dampak selama beberapa detik. Dengan cooldown sedang
+              dan biaya matahari yang relatif rendah, Sour Shot ideal untuk
+              penyebaran di awal permainan. Tanaman ini memiliki sinergi yang
+              kuat dengan tanaman tipe kontrol karena kemampuannya untuk
+              mempertahankan jarak serang. Efek asam dari proyektilnya juga
+              dapat menembus pertahanan ringan seperti zombie kerucut dan ember
+              dengan lebih cepat. Saat dibuahi, Sour Shot melepaskan hujan lemon
+              besar di seluruh baris, menghasilkan kerusakan besar dan membuat
+              zombie tertegun sebentar. Kemampuannya untuk mengenai beberapa
+              zombie sekaligus menjadikannya senjata pengendali kerumunan yang
+              andal. Meskipun tidak terlalu efektif melawan zombie tipe logam
+              berat seperti Gargantuars, Sour Shot dapat memperlambat gerakan
+              mereka secara signifikan. Tanaman ini tumbuh dengan cepat dan
+              membutuhkan ruang minimal untuk mengaktifkan serangannya. Animasi
+              serangannya unik, menampilkan percikan asam hijau-kuning yang
+              mencolok. Dalam strategi pertahanan jangka panjang, Sour Shot
+              dapat menyelamatkan banyak tanaman pendukung berkat perannya yang
+              fleksibel. Ia juga tahan terhadap efek cuaca seperti kabut atau
+              salju, membuatnya dapat diandalkan di hampir semua medan perang.
+              Zombi tipe terbang kebal terhadap efek percikannya, sehingga
+              membutuhkan tanaman anti-udara tambahan. Meskipun demikian,
+              kombinasi kerusakan area, efek perlambatan, dan sinergi yang kuat
+              dengan makanan tanaman membuat Sour Shot menjadi pesaing kuat
+              untuk menjadi favorit pemain dalam konten mendatang.
+            </p>
+          </section>
+        </div>
+        <div class="card">
+          <img src="icon-plants-upcoming1.png" alt="Plants Icon"
+            class="icon-img" />
+          <span class="upcoming-label">Konten yang akan datang</span>
+          <h3 class="plant-title">Tanaman Baru Brainstem</h3>
+
+          <section class="plant-section">
+            <h5>Deskripsi</h5>
+            <p>
+              Brainstem adalah tanaman pendukung unik yang memanipulasi perilaku
+              zombi menggunakan gelombang psionik yang dipancarkan dari batang
+              utamanya. Saat ditanam, Brainstem melepaskan aura ungu yang
+              menyebabkan zombi di dekatnya bergerak lebih lambat dan menjadi
+              lebih mudah dikendalikan. Efek utamanya adalah membingungkan
+              zombi, memungkinkan mereka untuk saling menyerang secara acak
+              selama beberapa detik. Tanaman ini sangat efektif untuk mengganggu
+              formasi zombi dan menciptakan kekacauan di garis depan musuh.
+              Meskipun tidak menyerang secara langsung, Brainstem memainkan
+              peran utama dalam strategi bertahan hidup. Zombi yang terkena
+              auranya juga menerima kerusakan tambahan dari serangan tanaman
+              lainnya. Tanaman ini memiliki area efek 3x3 di sekitarnya,
+              membuatnya paling efektif saat ditempatkan di tengah halaman. Saat
+              dibuahi, Brainstem memancarkan gelombang kuat yang membuat semua
+              zombi di layar pingsan selama beberapa detik. Efek pingsan ini
+              juga menonaktifkan kemampuan khusus zombi untuk sementara.
+              Brainstem memiliki waktu tanam yang lambat dan biaya matahari
+              sedang, seimbang dengan potensi taktisnya. Efeknya tidak berlaku
+              untuk zombi bos, tetapi masih memengaruhi zombi elit atau yang
+              terlindungi. Ia juga kebal terhadap serangan mental seperti yang
+              dilakukan oleh zombi hipno, yang membuatnya tangguh dalam
+              pertempuran psikologis. Secara visual, Brainstem menonjol dengan
+              otak yang bersinar dan akar berdenyut yang menyerupai saraf hidup.
+              Tanaman ini cocok dipadukan dengan tanaman dengan kerusakan tinggi
+              untuk memaksimalkan efek gangguannya. Dalam mode bertahan hidup
+              atau arena, Brainstem dapat menjadi kunci untuk membalikkan
+              keadaan saat gelombang zombi menyerang tanpa henti. Dengan
+              kemampuannya untuk memengaruhi pikiran musuh, Brainstem ditetapkan
+              untuk menjadi salah satu tanaman pendukung paling strategis dalam
+              konten Plants vs Zombies 2 mendatang.
+            </p>
+          </section>
+        </div>
+        <div class="card">
+          <img src="icon-plants-upcoming2.png" alt="Plants Icon"
+            class="icon-img" />
+          <span class="upcoming-label">Konten yang akan datang</span>
+          <h3 class="plant-title">Tanaman Baru Lemon-Aid</h3>
+
+          <section class="plant-section">
+            <h5>Deskripsi</h5>
+            <p>
+              Lemon-Aid adalah tanaman penyembuh dan pelindung yang
+              menggabungkan fungsi pendukung dengan efek area yang menyegarkan.
+              Saat ditanam, Lemon-Aid secara otomatis menyemprotkan kabut lemon
+              ke depan dan ke samping, secara berkala menyembuhkan tanaman di
+              sekitar dalam jangkauannya. Efek penyembuhannya meningkat seiring
+              level, memungkinkan tanaman yang hampir hancur untuk kembali ke
+              kondisi optimal. Selain penyembuhan, Lemon-Aid memberikan efek
+              "penyegaran" yang mempercepat waktu pengisian ulang tanaman di
+              sekitarnya. Dengan biaya matahari rendah hingga sedang, Lemon-Aid
+              paling baik ditempatkan di baris kedua untuk mendukung pertahanan
+              garis depan. Saat dibuahi, tanaman ini melepaskan gelombang jeruk
+              besar yang menyembuhkan semua tanaman di layar dan memberi mereka
+              perisai sementara. Zombi yang terkena kabut lemon mengalami
+              kondisi lemah, mengurangi kekuatan serangan mereka selama beberapa
+              detik. Lemon-Aid berpasangan sempurna dengan tanaman garis depan
+              seperti Wall-nut atau Endurian untuk memperpanjang daya tahan
+              mereka. Animasi visualnya ceria, menampilkan gelembung lemon
+              kuning muda yang bersinar lembut. Tanaman ini juga kebal terhadap
+              efek cuaca negatif seperti es dan racun, menjadikannya pilihan
+              ideal untuk level bertema ekstrem. Lemon-Aid memiliki cooldown
+              yang cukup cepat, yang memungkinkannya digunakan beberapa kali
+              dalam satu sesi. Meskipun tidak menyerang zombi secara langsung,
+              efek penyembuhan dan peningkatan strategisnya menjadikannya
+              tanaman sinergi utama. Dalam mode Arena dan Battlez, Lemon-Aid
+              dapat menjadi pembeda antara kemenangan dan kekalahan dengan
+              kemampuannya untuk menjaga stabilitas formasi. Efek penyembuhannya
+              juga bekerja pada tanaman jenis pemanggilan seperti Grave Buster
+              dan Potato Mine. Dengan peran multifungsi dan penampilannya yang
+              menyegarkan, Lemon-Aid adalah kandidat kuat untuk menjadi tanaman
+              pendukung favorit dalam pembaruan Plants vs Zombies 2 mendatang.
+            </p>
+          </section>
+        </div>
+        <div class="card">
+          <img src="icon-plants-upcoming3.png" alt="Plants Icon"
+            class="icon-img" />
+          <span class="upcoming-label">Konten yang akan datang</span>
+          <h3 class="plant-title">Tanaman Baru Rose</h3>
+
+          <section class="plant-section">
+            <h5>Deskripsi</h5>
+            <p>
+              Rose adalah tanaman berjenis sihir yang mampu memanipulasi waktu
+              dan mengubah zombie menjadi bentuk yang tidak berbahaya. Setiap
+              beberapa detik, Rose menembakkan kelopak ajaib berwarna merah muda
+              yang memiliki peluang untuk mengubah zombie biasa menjadi domba
+              lucu yang berjalan lambat dan tidak dapat menyerang. Serangannya
+              juga memperlambat kecepatan gerakan zombie, membuatnya ideal untuk
+              mengendalikan kecepatan pertempuran. Efek transfigurasi ini
+              bersifat sementara, tetapi cukup untuk menunda dan mengganggu
+              gelombang zombie yang datang. Rose paling efektif jika ditempatkan
+              di baris tengah, karena serangannya melengkung secara diagonal.
+              Saat diberi Makanan Tanaman, ia mengeluarkan mantra area yang kuat
+              yang memperlambat semua zombie di layar dan langsung mengubah tiga
+              zombie acak menjadi domba. Meskipun ia tidak memberikan kerusakan
+              tinggi, kemampuan kontrolnya luar biasa dan cocok dengan tanaman
+              ofensif. Zombi bos atau mereka yang memiliki baju besi berat kebal
+              terhadap transformasi, tetapi tetap terpengaruh oleh efek
+              perlambatannya. Rose memiliki cooldown sedang dan biaya matahari
+              yang cukup terjangkau untuk tanaman ajaib tingkatannya. Ia
+              memiliki penampilan yang elegan dengan mahkota kelopak yang
+              bersinar dan efek bintang yang berkilauan saat menyerang. Dia
+              sangat berguna dalam level strategi dan teka-teki yang membutuhkan
+              pengaturan waktu dan manajemen kerumunan yang tepat. Rose juga
+              memberdayakan tanaman ajaib di dekatnya, memberikan buff pasif
+              kecil dalam radius 3x3. Efek visual zombie yang berubah menjadi
+              domba sangat memuaskan dan menambahkan pesona aneh pada permainan.
+              Di dunia Plants vs Zombies 2, Rose menghadirkan sentuhan ajaib dan
+              nilai strategis tingkat lanjut bagi pemain berpengalaman.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section container">
+      <h2 class="section-title">Paket Unduhan</h2>
+
+      <div class="download-cards">
+        <!-- Free Plan Card -->
+        <div class="card download-card premium">
+          <div class="card-header">
+            <h3 class="plan-title">Plants vs Zombies™ 2</h3>
+            <p class="plan-sub-title">
+              Gulir ke Bawah Di Bagian Fitur Untuk Melihat Apa Yang Akan Anda
+              Dapatkan!
+            </p>
+            <p class="eventnoticepvz2">
+              🎁 <strong>Akses gratis</strong> tersedia selama <span
+                class="highlightpvz2">event terbatas</span> di <a
+                href="https://t.me/viviendochannel" target="_blank">grup
+                Telegram kami</a>.
+            </p>
+          </div>
+          <div class="plan-features-scroll">
+            <ul class="plan-features">
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Tanaman</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Zombie</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Peta</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Kostum</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Dunia</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Pot di Zen
+                Garden</li>
+              <li><i class="fas fa-check-circle"></i> Semua Misi/Level Telah
+                Diselesaikan</li>
+              <li><i class="fas fa-check-circle"></i> Semua Trofi/Penghargaan
+                Telah Didapatkan</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Level 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Mastery 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Pertahanan 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Serangan 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Biaya Matahari 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Dapat
+                Langsung Digunakan</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Bisa
+                Digunakan Langsung Tanpa "Recharge"</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Bisa
+                Digunakan Langsung Tanpa "Cooldown"</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Bisa
+                Digunakan Langsung Tanpa "Reload"</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Kostum Unik dan Lengkap</li>
+              <li><i class="fas fa-check-circle"></i> Semua Mata Uang Berjumlah
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar "Koin"
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar "Permata"
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar "Mint"
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "Sarung Tangan Arena" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "Bahan Bakar Penny" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "Poin Perk Penny Chase" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Jari Sihir" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Cubit Zombie" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Gesek Zombie" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Bola Salju" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Penyembur Api" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Vasebreaker Reveal" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Vasebreaker Butter" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Vasebreaker Move" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Beg Houled Shuffle" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Beg Houled Shovel" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Beg Houled Wizard" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Ancient Egypt" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Pirate Seas" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Wild West" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Frostbite Caves" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Lost City" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Far Future" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Dark Ages" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Neon Mixtape Tour" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Jurassic Marsh" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Big Wave Beach" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Modern Day" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Login dan Simpan Progres
+                ke "Akun EA" — Uang Kembali Jika Akun Diblokir</li>
+              <li><i class="fas fa-check-circle"></i> Login dan Simpan Progres
+                ke "Google Play Games" — Uang Kembali Jika Akun Diblokir</li>
+              <li><i class="fas fa-check-circle"></i> Bisa Langsung Main Mode
+                Petualangan "Offline", Penny "Online", dan Arena "Online"</li>
+              <li><i class="fas fa-check-circle"></i> Akses awal ke pembaruan
+                terbaru dan semua konten premium eksklusif</li>
+              <li><i class="fas fa-check-circle"></i> Tiga akun dalam satu file
+                data simpan, masing-masing dengan fitur unik</li>
+              <li><i class="fas fa-check-circle"></i> File OBB khusus yang
+                mencakup tanaman tersembunyi</li>
+              <li><i class="fas fa-check-circle"></i> Editor OBB untuk
+                mempermudah eksperimen dan modifikasi</li>
+              <li><i class="fas fa-check-circle"></i> Ganti nama akun/profil
+                sesuai permintaan — Gratis</li>
+              <li><i class="fas fa-check-circle"></i> Pengalaman bermain tanpa
+                iklan dan tanpa batasan akses</li>
+              <li><i class="fas fa-check-circle"></i> Akses ke grup eksklusif
+                anggota premium untuk diskusi tips & trik</li>
+              <li><i class="fas fa-check-circle"></i> Dan Masih Banyak Lagi
+                Fitur Menarik Lainnya Yang Bisa Kamu Dapatkan</li>
+            </ul>
+          </div>
+          <a
+            href="#"
+            class="btn-download premium"
+            id="whatsappBtn"
+            onclick="changeButtonText(event)">
+            Rp 15.000
+          </a>
+        </div>
+
+        <!-- Premium Plan Card -->
+        <div class="card download-card premium">
+          <div class="card-header">
+            <h3 class="plan-title">Plants vs Zombies™ 2: Reflourished</h3>
+            <p class="plan-sub-title">
+              Gulir ke Bawah Di Bagian Fitur Untuk Melihat Apa Yang Akan Anda
+              Dapatkan!
+            </p>
+            <p class="eventnoticepvz2">
+              🎁 <strong>Akses gratis</strong> tersedia selama <span
+                class="highlightpvz2">event terbatas</span> di <a
+                href="https://t.me/viviendochannel" target="_blank">grup
+                Telegram kami</a>.
+            </p>
+          </div>
+          <div class="plan-features-scroll">
+            <ul class="plan-features">
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Tanaman</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Zombie</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Peta</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Kostum</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Dunia</li>
+              <li><i class="fas fa-check-circle"></i> Membuka Semua Pot di Zen
+                Garden</li>
+              <li><i class="fas fa-check-circle"></i> Semua Misi/Level Telah
+                Diselesaikan</li>
+              <li><i class="fas fa-check-circle"></i> Semua Trofi/Penghargaan
+                Telah Didapatkan</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Level 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Mastery 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Pertahanan 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Serangan 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Biaya Matahari 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Dapat
+                Langsung Digunakan</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Bisa
+                Digunakan Langsung Tanpa "Recharge"</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Bisa
+                Digunakan Langsung Tanpa "Cooldown"</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Bisa
+                Digunakan Langsung Tanpa "Reload"</li>
+              <li><i class="fas fa-check-circle"></i> Semua Tanaman Memiliki
+                Kostum Unik dan Lengkap</li>
+              <li><i class="fas fa-check-circle"></i> Semua Mata Uang Berjumlah
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar "Koin"
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar "Permata"
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar "Mint"
+                2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "Sarung Tangan Arena" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "Bahan Bakar Penny" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "Poin Perk Penny Chase" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Jari Sihir" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Cubit Zombie" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Gesek Zombie" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Bola Salju" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Penyembur Api" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Vasebreaker Reveal" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Vasebreaker Butter" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Vasebreaker Move" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Beg Houled Shuffle" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Beg Houled Shovel" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Jumlah Besar
+                "PowerUp Beg Houled Wizard" 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Ancient Egypt" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Pirate Seas" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Wild West" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Frostbite Caves" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Lost City" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Far Future" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Dark Ages" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Neon Mixtape Tour" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Jurassic Marsh" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Big Wave Beach" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Level Zona Endless di
+                Dunia "Modern Day" Mencapai 2047483640</li>
+              <li><i class="fas fa-check-circle"></i> Login dan Simpan Progres
+                ke "Akun EA" — Uang Kembali Jika Akun Diblokir</li>
+              <li><i class="fas fa-check-circle"></i> Login dan Simpan Progres
+                ke "Google Play Games" — Uang Kembali Jika Akun Diblokir</li>
+              <li><i class="fas fa-check-circle"></i> Bisa Langsung Main Mode
+                Petualangan "Offline", Penny "Online", dan Arena "Online"</li>
+              <li><i class="fas fa-check-circle"></i> Akses awal ke pembaruan
+                terbaru dan semua konten premium eksklusif</li>
+              <li><i class="fas fa-check-circle"></i> Tiga akun dalam satu file
+                data simpan, masing-masing dengan fitur unik</li>
+              <li><i class="fas fa-check-circle"></i> File OBB khusus yang
+                mencakup tanaman tersembunyi</li>
+              <li><i class="fas fa-check-circle"></i> Editor OBB untuk
+                mempermudah eksperimen dan modifikasi</li>
+              <li><i class="fas fa-check-circle"></i> Ganti nama akun/profil
+                sesuai permintaan — Gratis</li>
+              <li><i class="fas fa-check-circle"></i> Pengalaman bermain tanpa
+                iklan dan tanpa batasan akses</li>
+              <li><i class="fas fa-check-circle"></i> Akses ke grup eksklusif
+                anggota premium untuk diskusi tips & trik</li>
+              <li><i class="fas fa-check-circle"></i> Dan Masih Banyak Lagi
+                Fitur Menarik Lainnya Yang Bisa Kamu Dapatkan</li>
+            </ul>
+          </div>
+          <a
+            href="#"
+            class="btn-download premium"
+            id="whatsappBtn"
+            onclick="changeButtonText(event)">
+            Rp 10.000
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section container">
+      <h2 class="section-title">Apa yang Dikatakan Pemain</h2>
+
+      <div class="testimonial-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="ulasan-bagas.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              Fitur Free-nya aja udah gila banget! Semua tanaman dan zombie
+              kebuka tanpa ribet. Tapi setelah nyobain Premium, baru kerasa
+              banget sensasi game-nya jadi total beda. Worth it banget
+              upgrade-nya!
+            </p>
+            <div class="testimonial-author">
+              <img src="user1.jpg" class="author-img" />
+              <div>
+                <strong>Bagas Pranata</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="ulasan-mawar.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              Aku awalnya pakai yang Free, tapi penasaran upgrade ke Premium.
+              Ternyata bisa main semua dunia, semua kostum, dan mata uangnya gak
+              abis-abis. Main PvZ2 jadi kaya punya dunia sendiri!
+            </p>
+            <div class="testimonial-author">
+              <img src="user2.jpg" class="author-img" />
+              <div>
+                <strong>Mawar Salsabila</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="ulasan-raka.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              Layanan pelanggannya luar biasa cepat! Baru beberapa menit, akun
+              Premium udah dikirim lengkap dengan nama profil sesuai request.
+              Profesional banget.
+            </p>
+            <div class="testimonial-author">
+              <img src="user3.jpg" class="author-img" />
+              <div>
+                <strong>Raka Mahendra</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="ulasan-yuna.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              プレミアム版を使ってから、PvZ2の世界がまるで変わった！植物のコスチュームも可愛くて、エンドレスゾーンも解放されていて大満足です。
+            </p>
+            <div class="testimonial-author">
+              <img src="user4.jpg" class="author-img" />
+              <div>
+                <strong>Yuna Hikari</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="ulasan-keira.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              無料版でも十分楽しかったけど、プレミアムにするとまさにフルパッケージ。全ての植物、コイン、ジェム…全部MAXで、最強感ハンパない！
+            </p>
+            <div class="testimonial-author">
+              <img src="user5.jpg" class="author-img" />
+              <div>
+                <strong>Keira Sana</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="ulasan-ayunda.jpg"
+              class="testimonial-gambar"
+              alt="Foto" />
+            <p class="testimonial-text">
+              Yang paling aku suka dari ViVenDo itu datanya lengkap banget, dan
+              yang Premium tuh bisa langsung main offline juga! Ga perlu tunggu
+              lama, langsung action!
+            </p>
+            <div class="testimonial-author">
+              <img src="user6.jpg" class="author-img" />
+              <div>
+                <strong>Ayunda Sekar</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="ulasan-wei.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              免费版很棒，所有植物和僵尸都解锁了。但我更推荐高级版，功能更全面，而且还有隐藏植物和专属配置，非常划算。
+            </p>
+            <div class="testimonial-author">
+              <img src="user7.jpg" class="author-img" />
+              <div>
+                <strong>Wei Junhao</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="ulasan-meilin.jpg"
+              class="testimonial-gambar"
+              alt="Foto" />
+            <p class="testimonial-text">
+              购买了高级版之后，体验提升了一个档次。存档修改精致，界面友好，还有客服快速响应，非常专业！
+            </p>
+            <div class="testimonial-author">
+              <img src="user8.jpg" class="author-img" />
+              <div>
+                <strong>Meilin Xiaomei</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="ulasan-mason.jpg" class="testimonial-gambar" alt="Foto" />
+            <p class="testimonial-text">
+              Honestly, the Free version already gives you a ton of value. But
+              the Premium pack? Absolute game-changer. Everything maxed out, no
+              limits, and smooth offline play.
+            </p>
+            <div class="testimonial-author">
+              <img src="user9.jpg" class="author-img" />
+              <div>
+                <strong>Mason Liam</strong>
+                <span>Premium Member</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal & Trust Badges -->
+    <section id="legalization" class="trust-badges container">
+      <h2 class="section-title">Kepercayaan & Pemberitahuan Hukum</h2>
+      <div class="badges-container">
+        <div class="badge">
+          <i class="fas fa-user-shield"></i>
+          <div>
+            <strong>Proyek Penggemar</strong>
+            <p>
+              Situs web ini adalah proyek penggemar independen dan non-komersial
+              dan tidak terkait dengan, disetujui oleh, atau disponsori oleh
+              Electronic Arts (EA) atau PopCap Games.
+            </p>
+          </div>
+        </div>
+        <div class="badge">
+          <i class="fas fa-lock"></i>
+          <div>
+            <strong>Unduhan 100% Aman</strong>
+            <p>
+              Semua file yang dapat diunduh telah dipindai secara menyeluruh
+              untuk memastikan mereka bebas dari malware, virus, atau komponen
+              pelacakan. Mereka aman untuk penggunaan pribadi.
+            </p>
+          </div>
+        </div>
+        <div class="badge">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <strong>Data Dimodifikasi yang Terverifikasi</strong>
+            <p>
+              Data yang disimpan ini telah dimodifikasi oleh anggota komunitas
+              dan telah ditinjau serta diverifikasi dengan cermat oleh penguji
+              yang berkualifikasi untuk memastikan akurasi dan integritasnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="question" class="premium-info">
+      <h2>Mengapa Membayar Jika Ada Versi Gratis?</h2>
+      <p>
+        Meskipun versi gratis tersedia,
+        <strong>Data Simpan Berbayar</strong> menawarkan beberapa manfaat
+        tambahan yang tidak akan Anda temukan di versi gratis, di antaranya.:
+      </p>
+
+      <ul>
+        <li>
+          Akses awal ke pembaruan terbaru, serta semua konten premium
+          eksklusif.:
+          <ul>
+            <li>
+              Tiga akun dalam satu file data simpan, masing-masing dengan fitur
+              unik
+            </li>
+            <li>File OBB spesial yang mencakup tanaman tersembunyi</li>
+            <li>Editor OBB untuk memfasilitasi eksperimen dan modifikasi</li>
+            <li>Ubah nama akun/profil sesuai permintaan — <em>gratis</em></li>
+            <li>Pengalaman bermain tanpa iklan dan tanpa batasan akses</li>
+          </ul>
+        </li>
+        <li>
+          Dukungan langsung kepada pengembang:
+          <ul>
+            <li>
+              Akses ke grup eksklusif untuk anggota premium untuk diskusi
+              tentang tips & trik.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Privacy Policy and Terms Section -->
+    <section id="privacy" class="privacy-section container">
+      <h2 class="section-title">Kebijakan Privasi & Syarat Layanan</h2>
+
+      <article>
+        <h3>Kebijakan Privasi</h3>
+        <p>
+          Privasi Anda sangat penting bagi kami. Kebijakan ini menjelaskan
+          bagaimana data pribadi Anda dikumpulkan, digunakan, dan dilindungi
+          selama Anda menggunakan aplikasi <strong>ViVenDo</strong>.
+        </p>
+
+        <h4>Informasi yang Kami Kumpulkan</h4>
+        <ul>
+          <li>
+            Data penggunaan anonim untuk membantu meningkatkan fungsi dan
+            pengalaman pengguna di aplikasi.
+          </li>
+        </ul>
+
+        <h4>Penggunaan Informasi</h4>
+        <ul>
+          <li>
+            Untuk mengirimkan pembaruan penting terkait unduhan, konten premium,
+            atau fitur baru di ViVenDo.
+          </li>
+          <li>
+            Untuk meningkatkan pengalaman Anda melalui fitur yang disesuaikan
+            secara personal.
+          </li>
+        </ul>
+
+        <h4>Keamanan Data</h4>
+        <p>
+          Kami menerapkan protokol keamanan standar industri untuk melindungi
+          informasi Anda agar tidak disalahgunakan, hilang, atau diakses tanpa
+          izin.
+        </p>
+      </article>
+
+      <article>
+        <h3>Syarat dan Ketentuan</h3>
+        <p>
+          Dengan mengakses dan menggunakan aplikasi ini, Anda dianggap telah
+          menyetujui syarat dan ketentuan berikut.
+        </p>
+
+        <h4>Lisensi Penggunaan</h4>
+        <p>
+          Seluruh konten yang dapat diunduh melalui
+          <strong>ViVenDo</strong> hanya boleh digunakan untuk keperluan pribadi
+          dan non-komersial. Segala bentuk distribusi ulang atau penjualan
+          kembali tidak diperbolehkan.
+        </p>
+
+        <h4>Penafian</h4>
+        <p>
+          <strong>ViVenDo</strong> adalah proyek buatan penggemar yang berdiri
+          secara independen. Kami tidak memiliki afiliasi dan tidak disponsori
+          oleh EA maupun PopCap Games. Semua merek dagang adalah milik
+          pemiliknya masing-masing.
+        </p>
+
+        <h4>Batasan Tanggung Jawab</h4>
+        <p>
+          Kami bertanggung jawab atas segala kerugian, kerusakan, atau
+          konsekuensi yang timbul dari penggunaan data game yang dimodifikasi
+          atau penggunaan aplikasi ini.
+        </p>
+
+        <h4>Pembaruan Kebijakan</h4>
+        <p>
+          Kebijakan Privasi dan Syarat Layanan ini dapat diperbarui
+          sewaktu-waktu. Silakan periksa halaman ini secara berkala untuk
+          mengetahui perubahan terbaru.
+        </p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <p class="section-subtitle">
+          Ada pertanyaan atau masukan? Kirimkan pesan langsung kepada kami
+          melalui WhatsApp.
+        </p>
+
+        <form id="whatsappForm">
+          <div class="form-group">
+            <label for="name">Nama Anda</label>
+            <input type="text" id="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pesan Anda</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Kirim Lewat WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; <span id="year"></span> ViVenDo | Plants vs Zombies 2. All rights
+        reserved. | <a href="#privacy">Privacy Policy</a> |
+        <a href="#privacy">Terms of Service</a> | <span id="app-version"></span>
+      </p>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button id="scroll-top-btn" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <button id="scroll-down-btn" aria-label="Scroll to bottom">
+      <i class="fas fa-arrow-down"></i>
+    </button>
+
+    <div class="social-bubble">
+      <a
+        href="https://wa.me/6285706800428"
+        target="_blank"
+        class="social-icon whatsapp"
+        title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a
+        href="https://www.youtube.com/@ViVienDoChannel"
+        target="_blank"
+        class="social-icon youtube"
+        title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a
+        href="https://t.me/viviendochannel"
+        target="_blank"
+        class="social-icon telegram"
+        title="Telegram">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+    </div>
+
+    <div id="toastNotification" class="toast">
+      <p>🔔 Tolong Subscribe YT:@ViVienDoChannel</p>
+      <button onclick="closeToast()">×</button>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
